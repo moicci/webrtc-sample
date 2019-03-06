@@ -50,10 +50,10 @@ function onAnswerCreated(desc) {
         e => console.log('localDescription success.'),
         e => console.log(`Failed to set setLocalDescription: ${e}`)
     );
-    updateAnswer();
+    updateAnswer(desc);
 }
 
-function updateAnswer() {
+function updateAnswer(desc) {
     let desc = peer.localDescription;
     console.log(`Answer to tx\n${desc.sdp}`);
     let textArea = document.getElementById("answer-sdp");
