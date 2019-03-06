@@ -54,7 +54,6 @@ function onAnswerCreated(desc) {
 }
 
 function updateAnswer(desc) {
-    let desc = peer.localDescription;
     console.log(`Answer to tx\n${desc.sdp}`);
     let textArea = document.getElementById("answer-sdp");
     textArea.value = desc.sdp;
