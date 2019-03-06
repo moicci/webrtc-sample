@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>受信側</title>
+<style>
+body { background: #afa; }
+video { width: 200px; height: 120px; border: 1px solid black; margin-right: 1em; margin-left: 1em;}
+.horz { display: flex; flex-direction: row; }
+.vert { display: flex; flex-direction: column; }
+textarea { font-size: 11px; width: 600px; height: 300px; }
+textarea#ice-candidates { width: 800px; height: 100px; }
+</style>
+</head>
+
+<body>
+
+<div class="horz">
+
+    <h1>RX</h1>
+    <video id="vid" autoplay></video>
+
+    <div>ICE Candidates to TX<br/>
+        <textarea id="ice-candidates"></textarea>
+    </div>
+
+</div>
+
+<div class="horz">
+
+    <div>
+        <button id="offer-sdp-button">Receive Offer from TX</button><br/>
+        <textarea id="offer-sdp"></textarea>
+    </div>
+
+    <div>Answer to TX<br/>
+        <textarea id="answer-sdp"></textarea>
+    </div>
+
+</div>
+
+</body>
+<script type="text/javascript" src="rx.js"></script>
+</html>
+
